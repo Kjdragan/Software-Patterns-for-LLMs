@@ -1,0 +1,49 @@
+Metadata-Version: 2.2
+Name: state-machine-langgraph
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.115.8
+Requires-Dist: langchain>=0.3.17
+Requires-Dist: langchain-community>=0.3.16
+Requires-Dist: langchain-openai>=0.3.3
+Requires-Dist: langgraph>=0.2.69
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: uvicorn>=0.34.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.3.3; extra == "dev"
+Requires-Dist: isort>=5.13.2; extra == "dev"
+Requires-Dist: black>=24.10.0; extra == "dev"
+Requires-Dist: ruff>=0.7.4; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.24.0; extra == "dev"
+
+# Software-Patterns-for-LLMs
+
+This project implements a modular **state machine** using **LangGraph** and **FastAPI**, designed to handle workflows through independent nodes. The nodes interact via a shared state, ensuring flexibility and scalability.
+
+---
+
+## Installation
+
+1. **Set OpenAI API Key**:
+
+   - Rename `.env.example` to `.env` and add your `OPENAI_API_KEY` to the `.env` file:
+     ```plaintext
+     OPENAI_API_KEY=your_openai_api_key
+     ```
+
+2. **Install Dependencies**:
+
+   - Use Poetry as the dependency manager to install the required packages:
+     ```bash
+     poetry install
+     ```
+
+3. **Run the FastAPI Server**:
+   - Start the server:
+     ```bash
+     poetry run uvicorn main:app --reload
+     ```
+
+---
